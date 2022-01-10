@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CameraController), typeof(Movement))]
 public class Player : Unit
 {
     public PlayerData playerData => _playerData;

@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
     readonly float TPS_MIN_rotateY = 15;
     readonly float TPS_MAX_rotateY = 50;
 
-    public enum CameraMode { FPS, TPS}
+    public enum CameraMode { FPS, TPS }
     public CameraMode cameraMode;
 
 
@@ -21,11 +21,13 @@ public class CameraController : MonoBehaviour
 
     Camera mainCamera;
     bool cameraLock;
-    public bool CameraLock { get => cameraLock;
+    public bool CameraLock
+    {
+        get => cameraLock;
         set
         {
             if (value == cameraLock) return;
-            if(value)
+            if (value)
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
@@ -61,7 +63,7 @@ public class CameraController : MonoBehaviour
     }
 
 
-    
+
     /// <summary>
     /// 카메라모드 설정
     /// </summary>
@@ -70,13 +72,13 @@ public class CameraController : MonoBehaviour
     {
         if (cameraMode == mode) return; //중복처리 안되게
         cameraMode = mode;
-        if(mode == CameraMode.FPS) mainCamera.transform.position = transform.position;
+        if (mode == CameraMode.FPS) mainCamera.transform.position = transform.position;
     }
 
     void InputMouse()
     {
         currentRotateX += Input.GetAxis("Mouse X") * mouseSensitivity;
-        if(cameraMode == CameraMode.FPS)
+        if (cameraMode == CameraMode.FPS)
             currentRotateY = Mathf.Clamp(currentRotateY - Input.GetAxis("Mouse Y") * mouseSensitivity, FPS_MIN_rotateY, FPS_MAX_rotateY);
         else
             currentRotateY = Mathf.Clamp(currentRotateY - Input.GetAxis("Mouse Y") * mouseSensitivity, TPS_MIN_rotateY, TPS_MAX_rotateY);
@@ -99,7 +101,7 @@ public class CameraController : MonoBehaviour
             mainCamera.transform.position = transform.position + new Vector3(
                 Mathf.Sin((currentRotateX + 180) * Mathf.Deg2Rad) * Mathf.Cos(currentRotateY * Mathf.Deg2Rad) * cameraDistance,
                 Mathf.Sin(currentRotateY * Mathf.Deg2Rad) * cameraDistance,
-                Mathf.Cos((currentRotateX+ 180) * Mathf.Deg2Rad) * Mathf.Cos(currentRotateY * Mathf.Deg2Rad) * cameraDistance
+                Mathf.Cos((currentRotateX + 180) * Mathf.Deg2Rad) * Mathf.Cos(currentRotateY * Mathf.Deg2Rad) * cameraDistance
             );
         }
     }
