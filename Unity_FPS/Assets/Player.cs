@@ -59,7 +59,7 @@ public abstract class Job
 public class Warrior : Job
 {
     public Warrior(Stat _stat) : base(_stat) { }
-    public override int AttackDamage() => stat.STR;
+    public override int AttackDamage() => stat.STR * 4;
     public override int MaxHp() => stat.CON * 100;
     public override int HpRegen() => stat.CON;
 }
