@@ -6,5 +6,5 @@ public abstract class UnitData : ScriptableObject
 {
     [SerializeField] string unitName;
 
-    public abstract Unit CreateUnit();
+    //public abstract Unit CreateUnit();
 }
