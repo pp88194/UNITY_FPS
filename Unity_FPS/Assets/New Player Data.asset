@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685e4a7431e6b744a9aba3179096a8c1, type: 3}
   m_Name: New Player Data
   m_EditorClassIdentifier: 
-  unitName: 
+  unitName: AA23
   stat:
-    _STR: 7
-    _INT: 0
-    _WIS: 0
-    _DEX: 0
-    _CHA: 0
-    _CON: 0
-  jobType: 0
+    _STR: 4
+    _INT: 4
+    _WIS: 4
+    _DEX: 4
+    _CHA: 4
+    _CON: 4
+  _jobType: 0
