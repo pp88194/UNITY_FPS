@@ -5,6 +5,6 @@ using UnityEngine;
 public abstract class UnitData : ScriptableObject
 {
     [SerializeField] string unitName;
-
-    //public abstract Unit CreateUnit();
+    [SerializeField] int maxHp;
+    public abstract Unit CreateUnit();
 }
