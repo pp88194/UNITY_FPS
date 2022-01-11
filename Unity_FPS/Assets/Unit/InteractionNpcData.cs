@@ -7,4 +7,5 @@ public class InteractionNpcData : UnitData
 {
     public List<string> TalkData => talkData;
     [SerializeField] List<string> talkData = new List<string>();
+
 }

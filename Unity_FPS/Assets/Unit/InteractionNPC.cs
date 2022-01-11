@@ -13,7 +13,7 @@ public class InteractionNPC : NPC
     {
         get
         {
-            if(_talkUI ==null)
+            if (_talkUI == null)
             {
                 _talkUI = Instantiate(ResourceUtils.Instance.InteractionNpc_TalkUI, ResourceUtils.Instance.MainCanvas);
             }
@@ -25,7 +25,7 @@ public class InteractionNPC : NPC
     {
         get
         {
-            if(_talkText == null)
+            if (_talkText == null)
             {
                 _talkText = talkUI.GetComponentInChildren<Text>();
             }
