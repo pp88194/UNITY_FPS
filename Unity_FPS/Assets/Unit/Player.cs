@@ -24,7 +24,6 @@ public class Player : Unit
                 PlayerJob = new Thief(playerData.UnitStat);
                 break;
         }
-        Debug.Log(PlayerJob.AttackDamage());
     }
 
     protected override void Dead()
