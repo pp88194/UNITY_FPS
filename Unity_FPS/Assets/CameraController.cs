@@ -52,17 +52,19 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            CameraLock = !cameraLock;
         if (Input.GetKeyDown(KeyCode.T))
             SetCameraMode(cameraMode == CameraMode.FPS ? CameraMode.TPS : CameraMode.FPS);
-        InputMouse();
+        if (CameraLock)
+            InputMouse();
     }
 
     private void FixedUpdate()
     {
-        CameraRotate();
+        if(CameraLock)
+            CameraRotate();
     }
-
-
 
     /// <summary>
     /// 카메라모드 설정
