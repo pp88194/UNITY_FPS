@@ -15,6 +15,7 @@ public abstract class UnitData : ScriptableObject
 [System.Serializable]
 public struct Stat
 {
+    public int MaxHp => _MaxHp;
     public int STR => _STR;
     public int INT => _INT;
     public int WIS => _WIS;
@@ -22,6 +23,7 @@ public struct Stat
     public int CHA => _CHA;
     public int CON => _CON;
 
+    [SerializeField] int _MaxHp; //최대체력
     [SerializeField] int _STR; //힘
     [SerializeField] int _INT; //지능
     [SerializeField] int _WIS; //지혜

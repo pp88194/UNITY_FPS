@@ -16,7 +16,7 @@ public abstract class Unit : MonoBehaviour
         }
         set
         {
-            hp = Mathf.Clamp(value, 0, 199);
+            hp = Mathf.Clamp(value, 0, 200);
         }
     }
     /// <summary>
