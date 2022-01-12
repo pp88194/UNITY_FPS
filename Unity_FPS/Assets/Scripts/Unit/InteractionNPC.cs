@@ -42,6 +42,10 @@ public class InteractionNPC : NPC
     public void ShowTalkUI() => talkUI.SetActive(true);
     public void HideTalkUI() => talkUI.SetActive(false);
 
+    /// <summary>
+    /// ¥Î»≠
+    /// </summary>
+    /// <param name="index"></param>
     public virtual void Talk(int index)
     {
         if (index < 0 || index > interactionNpcData.TalkData.Count) return;
