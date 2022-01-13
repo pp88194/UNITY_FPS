@@ -28,7 +28,12 @@ public class Inventory : MonoBehaviour
     private void Awake()
     {
         itemInventory = new Item[inventoryLength];
-        //GetComponent<GameManager>().inventory = this;
+        for (int i = 0; i < inventoryLength; i++)
+        {
+            itemInventory[i] = new Item(null,0 );
+        }
+        itemInventory[0] = null;
+
         inventoryUI = GetComponent<InventoryUI>();
     }
 
@@ -38,6 +43,7 @@ public class Inventory : MonoBehaviour
         {
             if (itemInventory[i].data != null)
             {
+                //Debug.Log(itemInventory[i]);
                 if(itemInventory[i].data.id == itemData.id)
                 {
                     if (itemInventory[i].count + count <= itemData.maxAmount)

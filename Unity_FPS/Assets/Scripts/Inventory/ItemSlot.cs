@@ -16,7 +16,6 @@ public class ItemSlot : MonoBehaviour
         set
         {
             itemInventoryIndex = value;
-            Debug.Log(value);
             if (value == -1)
             {
                 countText.text = "";
@@ -26,8 +25,8 @@ public class ItemSlot : MonoBehaviour
             else
             {
                 itemInventoryIndex = value;
-                countText.text = GameManager.instance.inventory.itemInventory[value].count != 1 ? GameManager.instance.inventory.itemInventory[value].count.ToString() : "";
-                icon.sprite = GameManager.instance.inventory.itemInventory[value].data.icon;
+                countText.text = GameManager.Instance.inventory.itemInventory[value].count != 1 ? GameManager.Instance.inventory.itemInventory[value].count.ToString() : "";
+                icon.sprite = GameManager.Instance.inventory.itemInventory[value].data.icon;
                 InItem = true;
             }
         }

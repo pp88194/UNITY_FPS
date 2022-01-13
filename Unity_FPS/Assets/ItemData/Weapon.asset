@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bea359a9f33db34fbbd4154653dced4, type: 3}
   m_Name: Weapon
   m_EditorClassIdentifier: 
-  id: 0
+  id: 2
   itemName: "\uB0A1\uC740 \uAC80"
   maxAmount: 5
   icon: {fileID: 21300000, guid: df0676fafbf09d94c8829e19fa894950, type: 3}

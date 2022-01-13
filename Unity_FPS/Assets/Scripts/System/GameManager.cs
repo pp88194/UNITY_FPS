@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
     public Inventory inventory;
     public InventoryUI inventoryUI;
-    private void Awake()
-    {
-        instance = this;
-    }
+    public static GameManager Instance;
     public void OnOffButton(GameObject gameObject)
     {
         gameObject.SetActive(!gameObject.activeSelf);
+    }
+    private void Awake()
+    {
+        Instance = this;
     }
 }
