@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] PlayerData playerData;
-
-    void CreatePlayer()
+    public static GameManager instance;
+    public Inventory inventory;
+    public InventoryUI inventoryUI;
+    private void Awake()
     {
-        GameObject container = new GameObject("Player");
-        container.AddComponent<Player>();
+        instance = this;
+    }
+    public void OnOffButton(GameObject gameObject)
+    {
+        gameObject.SetActive(!gameObject.activeSelf);
     }
 }
