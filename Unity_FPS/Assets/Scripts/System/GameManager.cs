@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
-    public Inventory inventory;
-    public InventoryUI inventoryUI;
-    private void Awake()
+    [SerializeField] PlayerData playerData;
+
+    void CreatePlayer()
     {
-        instance = this;
+        GameObject container = new GameObject("Player");
+        container.AddComponent<Player>();
     }
 }

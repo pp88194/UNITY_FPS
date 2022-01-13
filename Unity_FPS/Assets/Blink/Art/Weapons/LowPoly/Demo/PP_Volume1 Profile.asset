@@ -21,7 +21,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.46
+    value: 0.4
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -1394,11 +1394,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-<<<<<<< HEAD
-    value: 5.45
-=======
     value: 3
->>>>>>> bc22a5448eb12bd9e2cea6c886b1b3e576ad9a41
   threshold:
     overrideState: 1
     value: 1
